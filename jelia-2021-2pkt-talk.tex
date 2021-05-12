@@ -76,38 +76,44 @@
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Context}
+\begin{frame}[allowframebreaks]{Context}
     
-    Provide some context (max 4-5 items):
-    %
-    \vfill
-    %
     \begin{itemize}
-        \item fact 1
+        \item We live in the data-driven AI era
         %
         \begin{itemize}
-            \item note
+            \item pervasive need of processing wide amounts of data
+            \item[eg] coming form sensors, smart devices, social networks etc.
         \end{itemize}
         
-        \vfill
+        \bigskip
         
-        \item[$\Rightarrow$] fact 2 implied by fact 1
+        \item Stream processing is the preferred way towards \alert{scalability}
         %
         \begin{itemize}
-            \item[!] important \alert{notice}
+            \item streams as possibly \alert{unlimited FIFO queues} of data
+            \item either \emph{cold} (a.k.a. \alert{pull}) or \emph{hot} (a.k.a. \alert{push}) depending data \alert{generation}
+            \item processing does not require loading \emph{all} data in memory
+            \item support for \alert{lazy} manipulation of data
         \end{itemize}
         
-        \vfill
+        \framebreak
         
-        \item fact 3
+        \item Main-stream programming languages are blending FP with OOP
         %
         \begin{itemize}
-            \item note
+            \item[$\rightarrow$] cascades of higher-order functions as stream-processing pipelines
+            \item[eg] map, flat map, filter, fold, reduce, etc 
         \end{itemize}
         
-        \vfill
+        \bigskip
         
-        \item fact 4
+        \item Plenty of technologies for stream processing \alert{in the large}
+        %
+        \begin{itemize}
+            \item featuring advancend, time-related operators 
+            \item[eg] Kafka, Flink, Spark, Storm, etc.
+        \end{itemize}
         
     \end{itemize}
 \end{frame}
@@ -115,54 +121,65 @@
 
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{Motivation}
-    Enumerate motivations for this work:
+    \begin{block}{Question 1}
+        \centering
+        What is the role of LP in stream processing?
+    \end{block}
     %
+    \begin{itemize}
+        \item LP as a means to express \alert{complex event processing} \ccite{AnicicFRSSS10,AnicicRFS12}
+        \item \alert{ASP} as a means to reason over \emph{hot} streams \ccite{BeckEB17,Beck2018}
+    \end{itemize}
+
     \vfill
+
+    \begin{block}{Question 2}
+        \centering
+        What is the role of \emph{Prolog} in stream processing?
+    \end{block}
     %
     \begin{itemize}
-        \item motivation 1
-        %
-        \begin{itemize}
-            \item[e.g.] example
-        \end{itemize}
-        
-        \vfill
-        
-        \item motivation 2
-        %
-        \begin{itemize}
-            \item note
-        \end{itemize}
-        
-        \vfill
-        
-        \item motivation 3 with citations \ccite{crawford2016artificial,RibeiroSG16,wexler2017computer}
-        
-        \vfill
-        
-        \item etc
-        
+        \item[$\uparrow$] this is the focus of this work
     \end{itemize}
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{Some state of the art (optional)}
+\begin{frame}{Contributions of this Work}
 
-    Provide relevant information about the state of the art / related works here, possibly with references
+    \begin{enumerate}
+        \item We show that Prolog \emph{already} supports lazy stream manipulation
+        %
+        \begin{itemize}
+            \item as Prolog solvers can be intended as \alert{prosumers} of data
+        \end{itemize}
+        
+        \vfill
+        
+        \item We propose a notion of \alert{generator} aimed letting solvers:
+        %
+        \begin{itemize}
+            \item lazily consume streams of data from the external world
+        \end{itemize}
 
-\end{frame}
-%\\\\\\\\\\\\\\\\\\\\\
+        \vfill  
+        
+        \item We sketch \alert{state-machine-based} design for Prolog solvers
+        %
+        \begin{itemize}
+            \item aimed at supporting the aforementioned notion of \alert{generator}
+            \item without affecting its syntax, nor its semantics
+        \end{itemize}
 
-%\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{Contribution of the paper}
+        \vfill  
 
-\begin{block}{Explicitly state the contributions of the paper}
-    \begin{itemize}
-        \item contribution 1
-        \item contribution 2
-    \end{itemize}
-\end{block}
+        \item We demonstrate how generators can be exploited in practice
+        %
+        \begin{itemize}
+            \item[eg] letting Prolog invoke external solvers and lazily consume their responses
+            \item via the \twopkt{} technology \ccite{homepage2PKt}
+        \end{itemize}
+    \end{enumerate}
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
