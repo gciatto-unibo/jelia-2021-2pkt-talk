@@ -1,0 +1,26 @@
+@startuml
+hide footbox
+
+control Solver
+entity "OR-Tools" as G
+
+Solver -> G: tsp({c₁,...,cₙ}, //Path//, //Cost//)
+activate G
+G --> Solver: //Path//=[c, c', ..., c], ..., //Cost//=n
+deactivate G
+
+== backtracking ==
+
+Solver -> G
+activate G
+G --> Solver: //Path//=[d, d', ..., d], ..., //Cost//=n'
+deactivate G
+
+
+== backtracking ==
+
+Solver -> G
+activate G
+G --> Solver: //Path//=[e, e', ..., e], ..., //Cost//=n''
+deactivate G
+@enduml

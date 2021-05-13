@@ -1,0 +1,33 @@
+@startuml
+hide footbox
+
+control Solver
+entity "Generator for p/n" as G
+
+[-> Solver: //Goal//
+activate Solver
+
+== sub-goal //p(A₁, ..., Aₙ)// is met ==
+
+Solver -> G: //p(A₁, ..., Aₙ)//
+activate G
+G --> Solver: //A₁//=x₁, ..., //Aₙ//=xₙ
+deactivate G
+
+== backtracking ==
+
+Solver -> G
+activate G
+G --> Solver: //A₁//=y₁, ..., //Aₙ//=yₙ
+deactivate G
+
+== backtracking ==
+
+Solver -> G
+activate G
+G --> Solver: //A₁//=z₁, ..., //Aₙ//=zₙ
+deactivate G
+
+[<- Solver : Solution₁
+deactivate Solver
+@enduml
