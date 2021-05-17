@@ -79,7 +79,7 @@
 \begin{frame}[allowframebreaks]{Context}
     
     \begin{itemize}
-        \item We live in the data-driven AI era
+        \item We live in the \alert{data-driven AI} era
         %
         \begin{itemize}
             \item pervasive need of processing wide amounts of data
@@ -148,7 +148,7 @@
 \begin{frame}{Contributions of this Work}
 
     \begin{enumerate}
-        \item We show that Prolog \emph{already} supports lazy stream manipulation
+        \item We discuss why Prm olog \emph{already} supports lazy stream manipulation
         %
         \begin{itemize}
             \item as Prolog solvers can be intended as \alert{prosumers} of data
@@ -268,7 +268,7 @@
 
     \begin{alertblock}{Problem}
         \begin{itemize}
-            \item How to make logic solvers \alert{cold} strems consumers? 
+            \item How to make logic solvers \alert{cold} streams consumers? 
         \end{itemize}
     \end{alertblock}
 
@@ -312,7 +312,7 @@
             %
             \begin{description}
                 \item[Requests] carry variables + execution context
-                \item[Responses] carry variables assignments
+                \item[Responses] carry variables assignments $\mid$ errors
             \end{description}
             \item accessible by \alert{signature} (functor/arity)
         \end{itemize}
@@ -338,6 +338,10 @@
     \begin{center}
         \includegraphics[width=.8\linewidth]{img/2p-fsa-dataflow.pdf}
     \end{center}
+    %
+    \hfill\hint{formalization attempt here: \url{https://github.com/tuProlog/2pkt-state-machine}}
+
+    \framebreak
 
     \begin{block}{Locations}
         \begin{description}\small
@@ -412,17 +416,17 @@
 
 \begin{block}{Summing up, in this work we}
     \begin{itemize}
-        \item propose generators for manipulating cold streams via logic solvers
-        \item sketch their semantics in Prolog via a state-machine
-        \item demonstrate the feasibility of the approach via \twopkt{} + OR-Tools
+        \item propose \alert{generators} for manipulating \emph{cold} streams via logic solvers
+        \item sketch their semantics in Prolog via a \alert{state-machine}
+        \item demonstrate the feasibility of the approach via \alert{\twopkt{} + OR-Tools}
     \end{itemize}
 \end{block}
 
 \begin{exampleblock}{Future works}
     \begin{itemize}
-        \item Extend the framework to support side-effects
-        \item Extend the framework to support time and hot streams
-        \item Provide semantics for non-Prolog solvers
+        \item Extend the framework to support \alert{side-effects}
+        \item Extend the framework to support \alert{time} and \alert{hot streams}
+        \item Provide semantics for \alert{non-Prolog} solvers
     \end{itemize}
 \end{exampleblock}
 
