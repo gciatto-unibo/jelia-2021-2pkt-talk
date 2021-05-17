@@ -1,27 +1,11 @@
-# Paper presentation template
+# Lazy Stream Manipulation in Prolog via Backtracking: The Case of 2P-Kt (Talk @ JELIA 2021)
 
-## TODO
+by Giovanni Ciatto, Roberta Calegari, Andrea Omicini
 
-After cloning this template, one should rename a few files and edit some other files.
+## Abstract
 
-In particual, one should decide the presentation file name, and rename files accordingly.
+The ability to lazily manipulate long or infinite streams of data is an essential feature in the era of data-driven artificial intelligence. Yet, logic programming technologies currently fall short when it comes to handling long or infinite streams of data. In this paper, we discuss how Prolog can be reinterpreted as a stream processing tool, and re-designed around an abstract state-machine capable of lazily manipulating streams of data via backtracking.
 
+## Links
 
-Our conventions is as follows.
-Given:
-- the `i`-th author's surname initial `Ni` 
-- the acronym `VENUE` of the venue where the presentation will be held
-- the current year `20XX`
-    
-The presentation file name should then be:
-
-> `N1N2N3N4-VENUE-20XX-talk`
-    
-Accordingly, one should now:
-1. rename file `abcd-venue-20XX-talk.bib` into `N1N2N3N4-VENUE-20XX-talk.bib`
-2. rename file `abcd-venue-20XX-talk.sty` into `N1N2N3N4-VENUE-20XX-talk.sty`
-3. rename file `abcd-venue-20XX-talk.tex` into `N1N2N3N4-VENUE-20XX-talk.tex`
-4. replace line 10 of the `.tex` file from `\usepackage{abcd-venue-20XX-talk}` to `\usepackage{N1N2N3N4-VENUE-20XX-talk}`
-5. replace line 249 of the `.tex` file from `\bibliography{abcd-venue-20XX-talk}` to `\bibliography{N1N2N3N4-VENUE-20XX-talk}`
-6. replace line 16 of the `.github/workflows/compile.yml` file from `LATEX_ROOT: abcd-venue-20XX-talk` to `LATEX_ROOT: N1N2N3N4-VENUE-20XX-talk`
-    + take care of _not_ changing any indentation in the `.yml` file
+- Paper: https://doi.org/10.1007/978-3-030-75775-5_27
